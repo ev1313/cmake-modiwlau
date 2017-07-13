@@ -1,4 +1,4 @@
-set(CXX_VERSION 14 CACHE INTEGER "C++ version to compile with. (will be required from the compiler, set the CXX_STANDARD variable.)")
+set(CXX_VERSION 14 CACHE INTEGER "C++ version to compile with. (will be required from the compiler, sets the CXX_STANDARD variable.)")
 
 function(SETUP_CXX_TARGET TARGET_NAME)
     set_property(TARGET ${TARGET_NAME} PROPERTY CXX_STANDARD ${CXX_VERSION})
