@@ -1,3 +1,12 @@
+#
+# some helper functions for cpp projects
+#
+# setup_cxx_target sets the properties and target compile options for the targetname
+#
+# setup_cxx_library/executable takes the TARGET_NAME argument and passes the other arguments through
+# to the add_library/executable call. furthermore it calls setup_cxx_target.
+#
+
 set(CXX_VERSION 14 CACHE INTEGER "C++ version to compile with. (will be required from the compiler, sets the CXX_STANDARD variable.)")
 
 function(SETUP_CXX_TARGET TARGET_NAME)
