@@ -13,15 +13,15 @@ include(LibFindMacros)
 libfind_pkg_check_modules(EPOXY_PKGCONF epoxy)
 
 find_path(EPOXY_INCLUDE_DIR
-  NAMES epoxy/gl.h
-  HINTS ${EPOXY_PKGCONF_INCLUDE_DIRS}
-  PATH_SUFFIXES EPOXY
-)
+        NAMES epoxy/gl.h
+        HINTS ${EPOXY_PKGCONF_INCLUDE_DIRS}
+        PATH_SUFFIXES EPOXY
+        )
 
 find_library(EPOXY_LIBRARY
-  NAMES epoxy
-  HINTS ${EPOXY_PKGCONF_LIBRARY_DIRS}
-)
+        NAMES epoxy
+        HINTS ${EPOXY_PKGCONF_LIBRARY_DIRS}
+        )
 
 set(EPOXY_PROCESS_INCLUDES EPOXY_INCLUDE_DIR)
 set(EPOXY_PROCESS_LIBS EPOXY_LIBRARY)

@@ -9,7 +9,7 @@ find_package(BISON REQUIRED)
 
 function(GENERATE_LEXER)
     set(oneValueArgs INPUT_FILE OUTPUT_SRC)
-    cmake_parse_arguments(GENERATE_LEXER "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN} )
+    cmake_parse_arguments(GENERATE_LEXER "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
     add_custom_command(
             OUTPUT ${GENERATE_LEXER_OUTPUT_SRC}
@@ -20,7 +20,7 @@ endfunction(GENERATE_LEXER)
 
 function(GENERATE_PARSER)
     set(oneValueArgs INPUT_FILE OUTPUT_SRC OUTPUT_INC)
-    cmake_parse_arguments(GENERATE_PARSER "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN} )
+    cmake_parse_arguments(GENERATE_PARSER "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
     add_custom_command(
             OUTPUT ${GENERATE_PARSER_OUTPUT_SRC} ${GENERATE_PARSER_OUTPUT_INC}
