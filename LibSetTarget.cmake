@@ -14,7 +14,7 @@ function(SETUP_CXX_TARGET TARGET_NAME)
     set_property(TARGET ${TARGET_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
     target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra)
     target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:DEBUG>:-ggdb -O2>)
-    target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:RELEASE>:-O3 -NDEBUG>)
+    target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:RELEASE>:-O3>)
 endfunction(SETUP_CXX_TARGET)
 
 function(SETUP_CXX_LIBRARY)
